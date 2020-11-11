@@ -2,27 +2,28 @@
 
 pipeline {
     agent any
+    environment {
+        RELEASE='20.04'
+    }
     stages {
-        stage('One') {
-            steps {
-                echo 'Hi, this is Zulaikha from edureka'
-            }
-        }
-        stage('Two') {
-            steps {
-                input('Do you want to proceed?')
-            }
-        }
-        stage('Three') {
-            when {
-                not {
-                    branch "master"
-                }
+        stage('Build') {
+            environment {
+                LOG_LEVEL='INFO'
             }
             steps {
-                echo "Hello"
+                echo "Building release ${RELEASE} with log level ${LOG_LEVEL}..."
             }
         }
-        
+        stage('Test') {
+            steps {
+                echo "Testing release ${RELEASE}"
+                writeFile file: 'test-results-pipeline.txt', text: 'passed'
+            }
+        }
+    }
+    post {
+        success {
+            archiveArtifacts 'test-results-pipeline.txt'
+        }
     }
 }

@@ -1,6 +1,7 @@
 import io.cucumber.testng.AbstractTestNGCucumberTests;
-import org.testng.annotations.DataProvider;
 import io.cucumber.testng.CucumberOptions;
+import org.testng.annotations.DataProvider;
+
 
 @CucumberOptions(
         features = {"src/test/resources/features"},
@@ -11,10 +12,10 @@ import io.cucumber.testng.CucumberOptions;
         dryRun= false
 )
 
-public class Runner extends AbstractTestNGCucumberTests{
-        @Override
-        @DataProvider(parallel = true)
-        public Object[][] scenarios() {
-            return super.scenarios();
-        }
+public class Runner extends AbstractTestNGCucumberTests  {
+    @Override
+    @DataProvider(parallel = true)
+    public Object[][] scenarios() {
+        return super.scenarios();
+    }
 }

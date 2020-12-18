@@ -31,4 +31,10 @@ public class BaseStepdefs {
         String actualBannerText = AdminBaseDashboardPage.getUserProfileDropdownText();
         Assert.assertEquals(expectedBannerText, actualBannerText);
     }
+
+    @Then("Navigates to the product file import")
+    public void navigateToProductFileImportPage() {
+        AdminBaseDashboardPage.hoverOverLinkMakeSelection();
+        AdminBaseDashboardPage.clickProductFileImportLink();
+    }
 }

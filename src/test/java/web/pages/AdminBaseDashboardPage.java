@@ -15,6 +15,9 @@ public class AdminBaseDashboardPage extends BasePage{
     public final static String ADMIN_LOGIN_PAGE_URL = "http://admindev.5stardeal.local/admin/new/Admin";
 
     public final static By WELCOME_DROPDOWN = By.cssSelector("div#welcome > span");
+    public final static By PRODUCTS_HOVER_LINK = By.linkText("Products");
+    public final static By PRODUCT_FILE_IMPORT_LINK = By.linkText("Product File Import");
+
 
 
     public static void goToLoginPage() {
@@ -25,6 +28,17 @@ public class AdminBaseDashboardPage extends BasePage{
         return $(WELCOME_DROPDOWN)
                 .waitUntil(visible, TIMEOUT)
                 .getText();
+    }
+
+    public static void hoverOverLinkMakeSelection() {
+        $(PRODUCTS_HOVER_LINK)
+                .hover();
+    }
+
+    //Product File Import
+    public static void clickProductFileImportLink() {
+        $(PRODUCT_FILE_IMPORT_LINK)
+                .click();
     }
 
 }

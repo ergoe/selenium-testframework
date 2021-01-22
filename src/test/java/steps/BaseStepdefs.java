@@ -10,6 +10,7 @@ import web.pages.AdminLoginPage;
 import web.pages.LoginPage;
 import web.pages.SecurePage;
 
+
 import java.util.List;
 import java.util.Map;
 
@@ -24,17 +25,20 @@ public class BaseStepdefs {
     public void clickButton(DataTable dt) {
         List<Map<String, String>> list = dt.asMaps(String.class, String.class);
         AdminLoginPage.loginInToSite(list);
+
     }
 
     @Then("Taken to secure page should see {string}")
     public void verifyOnSecuredPage(String expectedBannerText) {
         String actualBannerText = AdminBaseDashboardPage.getUserProfileDropdownText();
         Assert.assertEquals(expectedBannerText, actualBannerText);
+
     }
 
     @Then("Navigates to the product file import")
     public void navigateToProductFileImportPage() {
         AdminBaseDashboardPage.hoverOverLinkMakeSelection();
         AdminBaseDashboardPage.clickProductFileImportLink();
+
     }
 }

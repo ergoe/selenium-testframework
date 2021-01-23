@@ -49,7 +49,11 @@ public class Hooks {
 //            Selenide.screenshot(test);
         }
         clearBrowserCookies();
-        WebDriverRunner.getWebDriver().quit();
+        try {
+            WebDriverRunner.getWebDriver().quit();
+        } catch(Exception ex) {
+            System.out.println("No webdriver to shutdown");
+        }
     }
 
 

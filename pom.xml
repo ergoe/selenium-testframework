@@ -67,6 +67,13 @@
             <artifactId>opencsv</artifactId>
             <version>5.2</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/commons-net/commons-net -->
+        <dependency>
+            <groupId>commons-net</groupId>
+            <artifactId>commons-net</artifactId>
+            <version>3.6</version>
+        </dependency>
+
 
     </dependencies>
     <build>
@@ -90,6 +97,27 @@
                     <target>11</target>
 <!--                    <release>11</release>-->
                 </configuration>
+            </plugin>
+            <plugin>
+                <groupId>net.masterthought</groupId>
+                <artifactId>maven-cucumber-reporting</artifactId>
+                <version>4.10.0</version>
+                <executions>
+                    <execution>
+                        <id>execution</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>generate</goal>
+                        </goals>
+                        <configuration>
+                            <projectName>MyProjectName</projectName>  <!-- Replace with project name -->
+                            <outputDirectory>target/cucumber-reports/advanced-reports</outputDirectory>
+                            <!--                            <cucumberOutput>target/cucumber-reports/CucumberTestReport.json</cucumberOutput>-->
+                            <buildNumber>1</buildNumber>
+                            <!--                            <parallelTesting>false</parallelTesting>-->
+                        </configuration>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
         <testResources>

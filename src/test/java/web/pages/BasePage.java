@@ -11,7 +11,8 @@ public class BasePage {
     public static final int TIMEOUT = 6000;
 
     public static void waitForPage(By selector) {
-        $(selector).waitUntil(Condition.visible, TIMEOUT);
+        $(selector)
+                .waitUntil(Condition.visible, TIMEOUT);
     }
 
 }

@@ -17,7 +17,8 @@ public class AdminBaseDashboardPage extends BasePage{
     public final static By WELCOME_DROPDOWN = By.cssSelector("div#welcome > span");
     public final static By PRODUCTS_HOVER_LINK = By.linkText("Products");
     public final static By PRODUCT_FILE_IMPORT_LINK = By.linkText("Product File Import");
-
+    public final static By EDI_HOVER_LINK = By.linkText("Edi");
+    public final static By EDI_HOOVER_MENU_FIND_BUTTON = By.cssSelector("div#submenu button[type=\"Submit\"]");
 
 
     public static void goToLoginPage() {
@@ -38,6 +39,17 @@ public class AdminBaseDashboardPage extends BasePage{
     //Product File Import
     public static void clickProductFileImportLink() {
         $(PRODUCT_FILE_IMPORT_LINK)
+                .click();
+    }
+
+    public static void hoverOverEdiLinkMakeSelection() {
+        $(EDI_HOVER_LINK)
+                .hover();
+    }
+
+    //Product File Import
+    public static void clickEdiFindButton() {
+        $(EDI_HOOVER_MENU_FIND_BUTTON)
                 .click();
     }
 

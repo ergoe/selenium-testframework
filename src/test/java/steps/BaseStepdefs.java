@@ -5,10 +5,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.testng.Assert;
-import web.pages.AdminBaseDashboardPage;
-import web.pages.AdminLoginPage;
-import web.pages.LoginPage;
-import web.pages.SecurePage;
+import web.pages.*;
 
 
 import java.util.List;
@@ -39,6 +36,18 @@ public class BaseStepdefs {
     public void navigateToProductFileImportPage() {
         AdminBaseDashboardPage.hoverOverLinkMakeSelection();
         AdminBaseDashboardPage.clickProductFileImportLink();
+    }
 
+    @Then("Navigates to the Edi Page")
+    public void navigateToTheEdiPage() {
+        AdminBaseDashboardPage.hoverOverEdiLinkMakeSelection();
+        AdminBaseDashboardPage.clickEdiFindButton();
+        System.out.println();
+    }
+
+    @Then("Enter Edi configuration to search for")
+    public void enterEdiConfigurationToSearchFor() {
+        AdminEdiPage.searchForConfigurations("1377");
+        System.out.println();
     }
 }

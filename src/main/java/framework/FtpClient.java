@@ -3,9 +3,9 @@ package framework;
 import org.apache.commons.net.PrintCommandListener;
 import org.apache.commons.net.ftp.FTPClient;
 import org.apache.commons.net.ftp.FTPReply;
-
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.IOException;
 import java.io.PrintWriter;
 
 public class FtpClient {
@@ -16,8 +16,9 @@ public class FtpClient {
     private String password = "d9ee2XZ";
     private FTPClient ftp;
 
-    public void openFtpConnection(File file) {
-        try {
+    public void openFtpConnection(File file) throws IOException {
+
+         try {
             ftp = new FTPClient();
             ftp.addProtocolCommandListener(new PrintCommandListener(new PrintWriter(System.out)));
 
@@ -27,15 +28,17 @@ public class FtpClient {
                 ftp.disconnect();
             }
             ftp.login(user, password);
-
-
             ftp.storeFile("Quest/EDIData/1161808/dropoff/" + file.getName(), new FileInputStream(file));
 
             ftp.disconnect();
         } catch (Exception ex) {
             ex.printStackTrace();
 
-        }
+        } finally {
+             if (ftp.isConnected()) {
+                 ftp.disconnect();
+             }
+         }
     }
 
 }

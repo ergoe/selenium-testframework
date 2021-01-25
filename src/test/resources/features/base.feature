@@ -22,6 +22,6 @@ Feature: Basic feature
     Given Open login page
     When User enters login credentials
       | username          | password   |
-      | eric.goeckeritz   | Password1  |
+      | eric.goeckeritz   | L@goe5910an  |
     Then Taken to secure page should see 'Welcome Eric Goeckeritz'
     Then Navigates to the product file import

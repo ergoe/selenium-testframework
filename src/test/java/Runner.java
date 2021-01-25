@@ -8,13 +8,13 @@ import org.testng.annotations.DataProvider;
         glue = {"steps"},
         plugin = {"pretty", "json:target/failsafe-reports/Surefire suite//CucumberTestReport.json", "html:target/index.html"},
         monochrome= true,
-        tags = "@test",
+        tags = "@edi",
         dryRun= false
 )
 
 public class Runner extends AbstractTestNGCucumberTests  {
     @Override
-    @DataProvider(parallel = true)
+    @DataProvider(parallel = false)
     public Object[][] scenarios() {
         return super.scenarios();
     }

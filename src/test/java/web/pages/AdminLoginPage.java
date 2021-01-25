@@ -12,7 +12,9 @@ import static com.codeborne.selenide.Selenide.open;
 
 public class AdminLoginPage extends BasePage{
 
-    public final static String ADMIN_LOGIN_PAGE_URL = "http://admindev.5stardeal.local/admin/new/admin/login";
+//    public final static String ADMIN_LOGIN_PAGE_URL = "http://admindev.5stardeal.local/admin/new/admin/login";
+    public final static String ADMIN_LOGIN_PAGE_URL = "http://quest-www4.tmkgl.local/admin/new/Admin/Login";
+
 
     public final static By USERNAME_SELECTOR = By.id("Login");
     public final static By PASSWORD_SELECTOR = By.id("Password");
@@ -45,7 +47,8 @@ public class AdminLoginPage extends BasePage{
 
     public static void loginInToSite(List<Map<String, String>> data) {
         enterUsername(data.get(0).get("username"));
-        enterPassword(data.get(0).get("password"));
+//        enterPassword(data.get(0).get("password"));
+        enterPassword("L@goe5910an");
         clickLoginButton();
     }
 

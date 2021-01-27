@@ -28,7 +28,7 @@ public class OrderStepdefs {
     public void singleOrderWithMultipleProductsCreatedWithFollowingParameters(DataTable dt) {
         List<List<String>> rows = dt.asLists();
         List<List<String>> updatedData = new ArrayList<List<String>>();
-        String orderIdentifier = Utilities.generateRandomOrderReference();
+        String orderIdentifier = Utilities.generateRandomOrderReferenceGuid();
 
         int counter = 1;
         for (List<String> row : rows) {
@@ -56,7 +56,7 @@ public class OrderStepdefs {
         for (List<String> row : rows) {
             String[] lineArray = row.toArray(new String[0]);
             if (counter > 1) {
-                orderIdentifier = Utilities.generateRandomOrderReference();
+                orderIdentifier = Utilities.generateRandomOrderReferenceGuid();
                 lineArray[0] = orderIdentifier;
                 orderReferenceNumbers.add(orderIdentifier);
             }

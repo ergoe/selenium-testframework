@@ -2,6 +2,7 @@ package framework;
 
 import java.math.BigInteger;
 import java.util.Random;
+import java.util.UUID;
 
 public class Utilities {
 
@@ -20,4 +21,12 @@ public class Utilities {
 
         return result.toString();
     }
+
+    public static String generateRandomOrderReferenceGuid() {
+        UUID orderUUID = UUID.randomUUID();
+        String orderID = orderUUID.toString().substring(0,29);
+//        String orderID = orderUUID.toString().substring(0,14);
+        return orderID;
+    }
+
 }

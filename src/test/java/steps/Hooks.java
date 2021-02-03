@@ -21,20 +21,20 @@ public class Hooks {
 
     @Before
     public void InitializeTest() {
-        crossBrowserRemoteWebDriver = new CrossBrowserRemoteWebDriver();
-        browser = "chrome";
-        try {
-            webDriver = crossBrowserRemoteWebDriver.createInstance(browser);
-            WebDriverRunner.setWebDriver(webDriver);
-        } catch (Exception ex) {
-            System.out.println(ex.getMessage());
-        }
-
-//        Configuration to run it locally --> Configuration.browser ="browser" <--
-//        Configuration.browser = browser;
-        Configuration.startMaximized = false;
-        Configuration.reportsFolder = "target/failsafe-reports/Surefire suite/";
-        System.out.println("Opening the browser: " + Configuration.browser);
+//        crossBrowserRemoteWebDriver = new CrossBrowserRemoteWebDriver();
+//        browser = "chrome";
+//        try {
+//            webDriver = crossBrowserRemoteWebDriver.createInstance(browser);
+//            WebDriverRunner.setWebDriver(webDriver);
+//        } catch (Exception ex) {
+//            System.out.println(ex.getMessage());
+//        }
+//
+////        Configuration to run it locally --> Configuration.browser ="browser" <--
+////        Configuration.browser = browser;
+//        Configuration.startMaximized = false;
+//        Configuration.reportsFolder = "target/failsafe-reports/Surefire suite/";
+//        System.out.println("Opening the browser: " + Configuration.browser);
     }
 
     @After

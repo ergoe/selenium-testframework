@@ -8,10 +8,13 @@ import org.testng.annotations.DataProvider;
         glue = {"steps"},
         plugin = {"pretty", "json:target/failsafe-reports/Surefire suite//CucumberTestReport.json", "html:target/index.html"},
         monochrome= true,
-        tags = "@edi",
+        tags = "@xmltest",
         dryRun= false
 )
-
+// freight order prodcuct code: 83-DT5910
+// freight tag @freight
+// Zero inventory product code: 10-0700
+// Zero tag @zero
 public class Runner extends AbstractTestNGCucumberTests  {
     @Override
     @DataProvider(parallel = false)

@@ -1,9 +1,10 @@
-package framework;
+package order;
 
 import com.opencsv.CSVWriter;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
+import framework.FtpClient;
+
+import java.io.*;
+import java.net.URI;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -85,6 +86,37 @@ public class GenerateOrders {
         return fullFilePath;
 
     }
+
+    public String slurpXmlFile(String fileName) {
+        Path path;
+        fileName = "placeholder.xml";
+        BufferedReader reader = null;
+        String line;
+        try {
+            /** /D:/gitRepos/selenium-testframework/target/test-classes/order */
+            URI uri = new URI(String.format("%s/orderxml/%s", ClassLoader.getSystemResource("order").toString(), fileName));
+            path = Paths.get(uri);
+            reader = new BufferedReader(new FileReader(path.toFile()));
+            if (reader == null) {
+                throw new Error(String.format("File not found: %s", fileName));
+            }
+            while ((line = reader.readLine()) != null) {
+                System.out.println(line);
+            }
+        } catch(Exception ex) {
+            System.out.println();
+        } finally {
+            if (reader != null) {
+                try {
+                    reader.close();
+                } catch (Exception ex) {
+                    ex.printStackTrace();
+                }
+            }
+        }
+        return "";
+    }
+
 
     private static void copyFileToLocalSystem(String filePath) {
         Path sourcePath = Paths.get(filePath);

@@ -24,7 +24,7 @@ public class Utilities {
 
     public static String generateRandomOrderReferenceGuid() {
         UUID orderUUID = UUID.randomUUID();
-        String orderID = orderUUID.toString().substring(0,29);
+        String orderID = orderUUID.toString().substring(0,22);
 //        String orderID = orderUUID.toString().substring(0,14);
         return orderID;
     }

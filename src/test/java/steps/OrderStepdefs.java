@@ -1,14 +1,15 @@
 package steps;
 
 import edu.emory.mathcs.backport.java.util.Arrays;
-import framework.GenerateOrders;
+import order.GenerateOrders;
 import framework.Utilities;
+import framework.database.JdbcSQLServerConnection;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
-import web.pages.AdminBaseDashboardPage;
+import io.cucumber.java.en.When;
 import web.pages.AdminEdiPage;
 
 import java.util.*;
@@ -17,11 +18,13 @@ public class OrderStepdefs {
 
     private Scenario scenario;
     private Map<String, Object> testData;
+    private static List<String> orderReferenceNumbers;
 
     @Before
     public void beforeStep(Scenario scenario) {
         this.scenario = scenario;
         testData = new HashMap<>();
+        orderReferenceNumbers = new ArrayList<>();
     }
 
     @Given("Single Order with multiple one or more products created with following parameters")
@@ -37,6 +40,7 @@ public class OrderStepdefs {
                 lineArray[0] = orderIdentifier;
             }
             updatedData.add(Arrays.asList(lineArray));
+            orderReferenceNumbers.add(orderIdentifier);
             counter += 1;
         }
 
@@ -91,4 +95,19 @@ public class OrderStepdefs {
         AdminEdiPage.runSpecifiedConfiguration("1377");
         System.out.println();
     }
+
+    @When("Connect to db")
+    public void connectToDb() {
+//        JdbcSQLServerConnection.getConnection();
+        JdbcSQLServerConnection.getConnection();
+    }
+
+    @When("read the xml file")
+    public void readTheXmlFile() {
+        GenerateOrders generateOrders = new GenerateOrders();
+        generateOrders.slurpXmlFile("");
+    }
+
+    // write to a file with multiple threads
+//    https://dzone.com/articles/writing-to-a-csv-file-from-multiple-threads
 }

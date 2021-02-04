@@ -560,3 +560,19 @@ Feature: Orders Test feature
       |Order	      |Company	  |First Name	|Last Name	|Address 1	      |Address 2	|City	    |State|	Country|ZipCode|Ship Method|Part	              |Quantity|	Description                                    |Phone	    |Price |PartnerLineItemID|
       |<placeholder>  |''           |Keyser	    |Soze	    |11810 W Lake Rd  |'' 	        |Vermilion	| OH  |	US	   |44089  |95	       |FAKEPROD-DOGMOR-SET   |1	   |Fantasy Dog Equipment Set                          |2167122996  |99.01 |1      |
       |<placeholder>  |''           |Keyser	    |Soze	    |11810 W Lake Rd  |'' 	        |Vermilion	| OH  |	US	   |44089  |95	       |FAKEPROD-ROCKET-SET   |1	   |Set Of Self-Propelled Flight Tools For Winning WW2 |2167122996  |99.01 |2      |
+
+
+  @dummy
+  Scenario: Dummy Test
+    Given Single Order with multiple one or more products created with following parameters
+      |Order	      |Company	  |First Name	|Last Name	|Address 1	      |Address 2	|City	    |State|	Country|ZipCode|Ship Method|Part	            |Quantity|	Description                                                      |	Phone	  |Price   |PartnerLineItemID|
+      |<placeholder>  |''           |Keyser	    |Soze	    |11810 W Lake Rd  |'' 	        |Vermilion	| OH  |	US	   |44089  |95	       |75-PT1022   	|30      |Remedy Bed Bug Dust Mite Cotton Mattress & Pillow Protector-Twin   |	2167122996|	151.11 |1      |
+    Given Open login page
+    When User enters login credentials
+      | username          | password   |
+      | eric.goeckeritz   |  |
+    Then Taken to secure page should see 'Welcome Eric Goeckeritz'
+    Then Navigates to the Edi Page
+    Then Enter Edi configuration to search for
+    Then Run the configuration specified
+#    TODO: Add automated checks for now check output manually

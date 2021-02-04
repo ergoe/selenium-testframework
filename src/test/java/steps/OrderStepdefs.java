@@ -102,10 +102,11 @@ public class OrderStepdefs {
         JdbcSQLServerConnection.getConnection();
     }
 
-    @When("read the xml file")
-    public void readTheXmlFile() {
+    @When("User creates ArrayOfOrder xml using {string} file")
+    public void userCreatesArrayOfOrderXml(String filename, DataTable dt) {
+        List<Map<String, String>> data = dt.asMaps();
         GenerateOrders generateOrders = new GenerateOrders();
-        generateOrders.slurpXmlFile("");
+        generateOrders.createOrderFromXmlFile(filename, data);
     }
 
     // write to a file with multiple threads

@@ -80,9 +80,9 @@
                 <Quantity>1</Quantity>
                 <Options xsi:nil="true" />
                 <ShippingUnits>0</ShippingUnits>
-                <UnitPrice>NaN</UnitPrice>
+                <UnitPrice>1.99</UnitPrice>
                 <LastUpdated xsi:nil="true" />
-                <TotalPrice>NaN</TotalPrice>
+                <TotalPrice>1.99</TotalPrice>
                 <AuctionHouse xsi:nil="true" />
                 <AuctionID>0</AuctionID>
                 <AuctionEID>0</AuctionEID>
@@ -200,9 +200,9 @@
                 <Quantity>1</Quantity>
                 <Options xsi:nil="true" />
                 <ShippingUnits>0</ShippingUnits>
-                <UnitPrice>NaN</UnitPrice>
+                <UnitPrice>2.99</UnitPrice>
                 <LastUpdated xsi:nil="true" />
-                <TotalPrice>NaN</TotalPrice>
+                <TotalPrice>2.99</TotalPrice>
                 <AuctionHouse xsi:nil="true" />
                 <AuctionID>0</AuctionID>
                 <AuctionEID>0</AuctionEID>
@@ -320,9 +320,9 @@
                 <Quantity>1</Quantity>
                 <Options xsi:nil="true" />
                 <ShippingUnits>0</ShippingUnits>
-                <UnitPrice>NaN</UnitPrice>
+                <UnitPrice>3.99</UnitPrice>
                 <LastUpdated xsi:nil="true" />
-                <TotalPrice>NaN</TotalPrice>
+                <TotalPrice>3.99</TotalPrice>
                 <AuctionHouse xsi:nil="true" />
                 <AuctionID>0</AuctionID>
                 <AuctionEID>0</AuctionEID>
@@ -440,9 +440,9 @@
                 <Quantity>1</Quantity>
                 <Options xsi:nil="true" />
                 <ShippingUnits>0</ShippingUnits>
-                <UnitPrice>NaN</UnitPrice>
+                <UnitPrice>4.99</UnitPrice>
                 <LastUpdated xsi:nil="true" />
-                <TotalPrice>NaN</TotalPrice>
+                <TotalPrice>4.99</TotalPrice>
                 <AuctionHouse xsi:nil="true" />
                 <AuctionID>0</AuctionID>
                 <AuctionEID>0</AuctionEID>
@@ -560,9 +560,9 @@
                 <Quantity>1</Quantity>
                 <Options xsi:nil="true" />
                 <ShippingUnits>0</ShippingUnits>
-                <UnitPrice>NaN</UnitPrice>
+                <UnitPrice>5.99</UnitPrice>
                 <LastUpdated xsi:nil="true" />
-                <TotalPrice>NaN</TotalPrice>
+                <TotalPrice>5.99</TotalPrice>
                 <AuctionHouse xsi:nil="true" />
                 <AuctionID>0</AuctionID>
                 <AuctionEID>0</AuctionEID>
@@ -680,9 +680,9 @@
                 <Quantity>1</Quantity>
                 <Options xsi:nil="true" />
                 <ShippingUnits>0</ShippingUnits>
-                <UnitPrice>NaN</UnitPrice>
+                <UnitPrice>6.99</UnitPrice>
                 <LastUpdated xsi:nil="true" />
-                <TotalPrice>NaN</TotalPrice>
+                <TotalPrice>6.99</TotalPrice>
                 <AuctionHouse xsi:nil="true" />
                 <AuctionID>0</AuctionID>
                 <AuctionEID>0</AuctionEID>
@@ -800,9 +800,9 @@
                 <Quantity>1</Quantity>
                 <Options xsi:nil="true" />
                 <ShippingUnits>0</ShippingUnits>
-                <UnitPrice>NaN</UnitPrice>
+                <UnitPrice>7.99</UnitPrice>
                 <LastUpdated xsi:nil="true" />
-                <TotalPrice>NaN</TotalPrice>
+                <TotalPrice>7.99</TotalPrice>
                 <AuctionHouse xsi:nil="true" />
                 <AuctionID>0</AuctionID>
                 <AuctionEID>0</AuctionEID>
@@ -920,9 +920,9 @@
                 <Quantity>1</Quantity>
                 <Options xsi:nil="true" />
                 <ShippingUnits>0</ShippingUnits>
-                <UnitPrice>NaN</UnitPrice>
+                <UnitPrice>8.99</UnitPrice>
                 <LastUpdated xsi:nil="true" />
-                <TotalPrice>NaN</TotalPrice>
+                <TotalPrice>8.99</TotalPrice>
                 <AuctionHouse xsi:nil="true" />
                 <AuctionID>0</AuctionID>
                 <AuctionEID>0</AuctionEID>
@@ -1040,9 +1040,9 @@
                 <Quantity>1</Quantity>
                 <Options xsi:nil="true" />
                 <ShippingUnits>0</ShippingUnits>
-                <UnitPrice>NaN</UnitPrice>
+                <UnitPrice>9.99</UnitPrice>
                 <LastUpdated xsi:nil="true" />
-                <TotalPrice>NaN</TotalPrice>
+                <TotalPrice>9.99</TotalPrice>
                 <AuctionHouse xsi:nil="true" />
                 <AuctionID>0</AuctionID>
                 <AuctionEID>0</AuctionEID>

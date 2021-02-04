@@ -22,6 +22,6 @@ Feature: As a visitor, I can manage the book store Newsletter subscription
   Scenario: Testing DB Connection
     When Connect to db
 
-  @xmltest
+
   Scenario: Testing xml reader
     When read the xml file
